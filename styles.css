@@ -19,5 +19,7 @@
 .mug-gallery figure{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.24)}
 .mug-gallery img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}
 .mug-gallery figcaption{padding:11px 12px;color:var(--ink);font-weight:800;font-size:.86rem}
+.instagram-link{color:#fff;text-decoration:none;font-weight:800;padding:11px 16px;border:1px solid #ffffff35;border-radius:999px;background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);box-shadow:0 8px 24px rgba(253,29,29,.18)}
+.instagram-link:hover,.instagram-link:focus{transform:translateY(-2px);box-shadow:0 10px 28px rgba(253,29,29,.3)}
 @media(max-width:920px){.mug-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){.mug-showcase{margin-top:36px;padding:18px;border-radius:20px}.showcase-heading{align-items:flex-start;flex-direction:column;gap:8px}.mug-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.mug-gallery figcaption{font-size:.78rem;padding:9px}}
