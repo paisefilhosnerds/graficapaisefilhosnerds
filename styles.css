@@ -12,6 +12,7 @@
 @media(max-width:920px){.hero-intro{grid-template-columns:1fr}.hero-intro .hero-actions{justify-content:flex-start}.brand-banner>img{min-height:260px;object-fit:cover;object-position:center}}
 @media(max-width:680px){.topbar{position:relative}.brand-banner{min-height:0;padding:0}.brand-banner>img{height:235px;min-height:235px;object-fit:cover;object-position:center}.hero-intro{padding:42px 20px}.hero-intro .trust-row{left:auto;right:auto;bottom:auto;position:relative;flex-wrap:wrap;justify-content:flex-start;gap:10px 16px}.hero-intro .secondary{color:#fff}}
 .mug-showcase{margin-top:54px;padding:28px;background:linear-gradient(145deg,#071125,#102e62);border-radius:28px;box-shadow:var(--shadow);color:#fff}
+.mug-showcase[hidden]{display:none}
 .showcase-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
 .showcase-heading h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:.16em 0 0}
 .showcase-heading button{border:0;background:none;color:var(--cyan);font:800 .95rem Inter,sans-serif;cursor:pointer;padding:10px}
