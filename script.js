@@ -9,6 +9,13 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 
+document.querySelectorAll('.product-item').forEach(item => item.addEventListener('toggle', () => {
+  if (!item.open) return;
+  document.querySelectorAll('.product-item').forEach(other => {
+    if (other !== item) other.open = false;
+  });
+}));
+
 document.querySelectorAll('[data-product]').forEach(button => button.addEventListener('click', () => {
   document.querySelector('#produto').value = button.dataset.product;
   document.querySelector('#orcamento').scrollIntoView({behavior: 'smooth'});
