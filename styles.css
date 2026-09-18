@@ -24,6 +24,18 @@
 .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media(max-width:920px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:680px){.product-grid{grid-template-columns:1fr}}
+.product-accordion{display:grid;gap:12px}
+.product-item{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 5px 20px rgba(8,19,39,.04)}
+.product-item summary{list-style:none;display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;font-family:"Exo 2",sans-serif;font-size:1.15rem}
+.product-item summary::-webkit-details-marker{display:none}
+.product-item summary .icon{margin:0;font-size:1.65rem}
+.product-item summary .open-mark{margin-left:auto;color:var(--cyan);font-size:1.7rem;font-weight:800;transition:transform .2s ease}
+.product-item[open] summary .open-mark{transform:rotate(45deg)}
+.product-content{padding:0 24px 24px;color:var(--muted)}
+.product-content>button{border:0;border-radius:10px;background:var(--navy);color:#fff;padding:12px 16px;font-weight:800;cursor:pointer}
+.product-item .mug-showcase{display:none;margin:0 18px 18px;padding:24px;color:#fff}
+.product-item[open] .mug-showcase{display:block}
+@media(max-width:680px){.product-item summary{padding:17px}.product-content{padding:0 17px 17px}.product-item .mug-showcase{margin:0 10px 10px;padding:16px}}
 .showcase-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
 .showcase-heading h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:.16em 0 0}
 .showcase-heading button{border:0;background:none;color:var(--cyan);font:800 .95rem Inter,sans-serif;cursor:pointer;padding:10px}
