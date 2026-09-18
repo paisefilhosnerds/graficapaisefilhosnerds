@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23071125'/%3E%3Cpath d='M12 20h40v18a14 14 0 0 1-14 14H26a14 14 0 0 1-14-14V20Z' fill='%2300d8ff'/%3E%3Cpath d='M20 30h24M32 22v25' stroke='%23ff3cac' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
   <a class="skip" href="#principal">Ir para o conteúdo</a>
@@ -21,12 +21,7 @@
     </a>
     <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
     <nav id="nav" aria-label="Navegação principal">
-      <details class="nav-dropdown">
-        <summary>Produtos <span aria-hidden="true">▾</span></summary>
-        <div class="submenu">
-          <a href="#canecas" data-show-mugs aria-controls="canecas" aria-expanded="false">Canecas</a>
-        </div>
-      </details>
+      <a href="#produtos">Produtos</a>
       <a href="#como-funciona">Como funciona</a>
       <a href="#orcamento" class="nav-cta">Pedir orçamento</a>
     </nav>
@@ -56,23 +51,11 @@
         <div><p class="eyebrow">Feito especialmente para você</p><h2>O que personalizamos</h2></div>
         <p>Escolha um produto e conte a sua ideia. Nós cuidamos da arte e da produção.</p>
       </div>
-      <div class="product-grid">
-        <article class="product-card"><span class="icon">👕</span><h3>Camisas</h3><p>Estampas para eventos, equipes, negócios e ocasiões especiais.</p><button data-product="Camisa personalizada">Quero esta opção <span>→</span></button></article>
-        <article class="product-card"><span class="icon">▤</span><h3>Banners e cartazes</h3><p>Comunicação visual em vários formatos para sua loja ou evento.</p><button data-product="Banner ou cartaz">Quero esta opção <span>→</span></button></article>
-        <article class="product-card"><span class="icon">✦</span><h3>Artes digitais</h3><p>Posts, convites, etiquetas e criações prontas para usar ou imprimir.</p><button data-product="Arte digital">Quero esta opção <span>→</span></button></article>
-      </div>
-      <div class="mug-showcase" id="canecas" aria-labelledby="mug-showcase-title">
-        <div class="showcase-heading">
-          <div><p class="eyebrow">Modelos em destaque</p><h3 id="mug-showcase-title">Canecas com arte 360°</h3></div>
-          <button data-product="Caneca personalizada">Pedir uma caneca <span>→</span></button>
-        </div>
-        <div class="mug-gallery">
-          <figure><img src="assets/caneca-hyoga.jpg" alt="Caneca personalizada com arte de Hyoga de Cisne" loading="lazy"><figcaption>Hyoga de Cisne</figcaption></figure>
-          <figure><img src="assets/caneca-ikki.jpg" alt="Caneca personalizada com arte de Ikki de Fênix" loading="lazy"><figcaption>Ikki de Fênix</figcaption></figure>
-          <figure><img src="assets/caneca-seiya.jpg" alt="Caneca personalizada com arte de Seiya de Pégaso" loading="lazy"><figcaption>Seiya de Pégaso</figcaption></figure>
-          <figure><img src="assets/caneca-shiryu.jpg" alt="Caneca personalizada com arte de Shiryu de Dragão" loading="lazy"><figcaption>Shiryu de Dragão</figcaption></figure>
-          <figure><img src="assets/caneca-shun.jpg" alt="Caneca personalizada com arte de Shun de Andrômeda" loading="lazy"><figcaption>Shun de Andrômeda</figcaption></figure>
-        </div>
+      <div class="product-accordion">
+        <details class="product-item"><summary><span class="icon">☕</span><strong>Canecas personalizadas</strong><span class="open-mark">+</span></summary><div class="product-content mug-showcase"><div class="showcase-heading"><div><p class="eyebrow">Modelos em destaque</p><h3>Canecas com arte 360°</h3></div><button data-product="Caneca personalizada">Pedir uma caneca <span>→</span></button></div><div class="mug-gallery"><figure><img src="assets/caneca-hyoga.jpg" alt="Caneca personalizada com arte de Hyoga de Cisne" loading="lazy"><figcaption>Hyoga de Cisne</figcaption></figure><figure><img src="assets/caneca-ikki.jpg" alt="Caneca personalizada com arte de Ikki de Fênix" loading="lazy"><figcaption>Ikki de Fênix</figcaption></figure><figure><img src="assets/caneca-seiya.jpg" alt="Caneca personalizada com arte de Seiya de Pégaso" loading="lazy"><figcaption>Seiya de Pégaso</figcaption></figure><figure><img src="assets/caneca-shiryu.jpg" alt="Caneca personalizada com arte de Shiryu de Dragão" loading="lazy"><figcaption>Shiryu de Dragão</figcaption></figure><figure><img src="assets/caneca-shun.jpg" alt="Caneca personalizada com arte de Shun de Andrômeda" loading="lazy"><figcaption>Shun de Andrômeda</figcaption></figure></div></div></details>
+        <details class="product-item"><summary><span class="icon">👕</span><strong>Camisas personalizadas</strong><span class="open-mark">+</span></summary><div class="product-content"><p>Estampas para eventos, equipes, negócios e ocasiões especiais.</p><button data-product="Camisa personalizada">Pedir uma camisa <span>→</span></button></div></details>
+        <details class="product-item"><summary><span class="icon">▤</span><strong>Banners e cartazes</strong><span class="open-mark">+</span></summary><div class="product-content"><p>Comunicação visual em vários formatos para sua loja ou evento.</p><button data-product="Banner ou cartaz">Pedir banner ou cartaz <span>→</span></button></div></details>
+        <details class="product-item"><summary><span class="icon">✦</span><strong>Artes digitais</strong><span class="open-mark">+</span></summary><div class="product-content"><p>Posts, convites, etiquetas e criações prontas para usar ou imprimir.</p><button data-product="Arte digital">Pedir uma arte digital <span>→</span></button></div></details>
       </div>
     </section>
 
@@ -99,6 +82,6 @@
   </main>
 
   <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">P&amp;F</span><span><strong>Pais e Filhos Nerds</strong><small>Personalizados feitos com criatividade.</small></span></a><a class="instagram-link" href="https://www.instagram.com/paisefilhosnerd/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o Instagram Pais e Filhos Nerd">Instagram: @paisefilhosnerd</a><p>© <span id="year"></span> Pais e Filhos Nerds.</p></footer>
-  <script src="script.js?v=9"></script>
+  <script src="script.js?v=10"></script>
 </body>
 </html>
