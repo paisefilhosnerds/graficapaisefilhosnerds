@@ -9,11 +9,21 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 
+const dropdownButton = document.querySelector('.dropdown-toggle');
+const productSubmenu = document.querySelector('#product-submenu');
+dropdownButton.addEventListener('click', () => {
+  const open = productSubmenu.hidden;
+  productSubmenu.hidden = !open;
+  dropdownButton.setAttribute('aria-expanded', String(open));
+});
+
 const mugsButton = document.querySelector('[data-show-mugs]');
 const mugsSection = document.querySelector('#canecas');
 mugsButton.addEventListener('click', () => {
   mugsSection.hidden = false;
   mugsButton.setAttribute('aria-expanded', 'true');
+  productSubmenu.hidden = true;
+  dropdownButton.setAttribute('aria-expanded', 'false');
   mugsSection.scrollIntoView({behavior: 'smooth', block: 'start'});
 });
 
