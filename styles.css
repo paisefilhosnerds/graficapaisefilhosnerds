@@ -36,6 +36,13 @@
 .product-item .mug-showcase{display:none;margin:0 18px 18px;padding:24px;color:#fff}
 .product-item[open] .mug-showcase{display:block}
 @media(max-width:680px){.product-item summary{padding:17px}.product-content{padding:0 17px 17px}.product-item .mug-showcase{margin:0 10px 10px;padding:16px}}
+.mug-gallery img[role="button"]{cursor:zoom-in;transition:transform .2s ease,filter .2s ease}
+.mug-gallery img[role="button"]:hover,.mug-gallery img[role="button"]:focus{transform:scale(1.03);filter:brightness(1.08);outline:3px solid var(--cyan);outline-offset:-3px}
+.image-lightbox{width:min(92vw,880px);max-height:92vh;margin:auto;padding:18px;border:1px solid #ffffff38;border-radius:20px;background:#050c1b;color:#fff;box-shadow:0 30px 90px rgba(0,0,0,.65)}
+.image-lightbox::backdrop{background:rgba(2,7,18,.88);backdrop-filter:blur(6px)}
+.image-lightbox img{display:block;width:100%;max-height:78vh;object-fit:contain;border-radius:12px}
+.image-lightbox p{margin:12px 48px 0;text-align:center;font-weight:800}
+.lightbox-close{position:absolute;z-index:2;top:10px;right:10px;width:42px;height:42px;border:1px solid #ffffff55;border-radius:50%;background:#071125e6;color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
 .showcase-heading{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-bottom:22px}
 .showcase-heading h3{font-size:clamp(1.7rem,3vw,2.5rem);margin:.16em 0 0}
 .showcase-heading button{border:0;background:none;color:var(--cyan);font:800 .95rem Inter,sans-serif;cursor:pointer;padding:10px}
