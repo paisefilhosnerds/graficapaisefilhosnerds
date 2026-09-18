@@ -11,8 +11,7 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
 
 const mugsButton = document.querySelector('[data-show-mugs]');
 const mugsSection = document.querySelector('#canecas');
-mugsButton.addEventListener('click', event => {
-  event.preventDefault();
+mugsButton.addEventListener('click', () => {
   mugsSection.hidden = false;
   mugsButton.setAttribute('aria-expanded', 'true');
   mugsSection.scrollIntoView({behavior: 'smooth', block: 'start'});
