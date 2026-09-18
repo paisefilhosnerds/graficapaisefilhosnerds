@@ -9,6 +9,15 @@ nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
   menuButton.setAttribute('aria-expanded', 'false');
 }));
 
+const mugsButton = document.querySelector('[data-show-mugs]');
+const mugsSection = document.querySelector('#canecas');
+mugsButton.addEventListener('click', event => {
+  event.preventDefault();
+  mugsSection.hidden = false;
+  mugsButton.setAttribute('aria-expanded', 'true');
+  mugsSection.scrollIntoView({behavior: 'smooth', block: 'start'});
+});
+
 document.querySelectorAll('[data-product]').forEach(button => button.addEventListener('click', () => {
   document.querySelector('#produto').value = button.dataset.product;
   document.querySelector('#orcamento').scrollIntoView({behavior: 'smooth'});
