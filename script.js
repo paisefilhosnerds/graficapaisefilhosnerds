@@ -16,6 +16,32 @@ document.querySelectorAll('.product-item').forEach(item => item.addEventListener
   });
 }));
 
+const lightbox = document.querySelector('#image-lightbox');
+const lightboxImage = document.querySelector('#lightbox-image');
+const lightboxCaption = document.querySelector('#lightbox-caption');
+document.querySelectorAll('.mug-gallery img').forEach(image => {
+  image.tabIndex = 0;
+  image.setAttribute('role', 'button');
+  image.setAttribute('aria-label', `${image.alt}. Clique para ampliar.`);
+  const openImage = () => {
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.textContent = image.closest('figure').querySelector('figcaption').textContent;
+    lightbox.showModal();
+  };
+  image.addEventListener('click', openImage);
+  image.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openImage();
+    }
+  });
+});
+document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+lightbox.addEventListener('click', event => {
+  if (event.target === lightbox) lightbox.close();
+});
+
 document.querySelectorAll('[data-product]').forEach(button => button.addEventListener('click', () => {
   document.querySelector('#produto').value = button.dataset.product;
   document.querySelector('#orcamento').scrollIntoView({behavior: 'smooth'});
