@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%23071125'/%3E%3Cpath d='M12 20h40v18a14 14 0 0 1-14 14H26a14 14 0 0 1-14-14V20Z' fill='%2300d8ff'/%3E%3Cpath d='M20 30h24M32 22v25' stroke='%23ff3cac' stroke-width='6' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 </head>
 <body>
   <a class="skip" href="#principal">Ir para o conteúdo</a>
@@ -81,7 +81,13 @@
     </section>
   </main>
 
+  <dialog class="image-lightbox" id="image-lightbox" aria-label="Imagem ampliada da caneca">
+    <button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button>
+    <img id="lightbox-image" alt="">
+    <p id="lightbox-caption"></p>
+  </dialog>
+
   <footer><a class="brand footer-brand" href="#inicio"><span class="brand-mark">P&amp;F</span><span><strong>Pais e Filhos Nerds</strong><small>Personalizados feitos com criatividade.</small></span></a><a class="instagram-link" href="https://www.instagram.com/paisefilhosnerd/" target="_blank" rel="noopener noreferrer" aria-label="Abrir o Instagram Pais e Filhos Nerd">Instagram: @paisefilhosnerd</a><p>© <span id="year"></span> Pais e Filhos Nerds.</p></footer>
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>
